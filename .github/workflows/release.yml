@@ -17,15 +17,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ELEVATED_TOKEN }} 
         with:
-          tag_name: ${{ github.ref }}-new-new
-          release_name: Release ${{ github.ref }}-new-new
+          tag_name: ${{ github.ref }}-peter
+          release_name: Release ${{ github.ref }}-peter
           body: |
             This is a test release 💩
           draft: false
           prerelease: false
 
-      # - name: Repository Dispatch
-      #   uses: peter-evans/repository-dispatch@v1
-      #   with:
-      #     token: ${{ secrets.REPO_ACCESS_TOKEN }}
-      #     event-type: create-docker-image
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.ELEVATED_TOKEN }} 
+          event-type: create-docker-image
