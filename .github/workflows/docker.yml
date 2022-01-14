@@ -1,6 +1,7 @@
 on:
-  repository_dispatch:
-    types: [create-docker-image]
+  push:
+    tags:
+      - '*' # a release should make a tag?
 
 name: Docker Release
 
