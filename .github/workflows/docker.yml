@@ -3,10 +3,7 @@ on:
     tags:
       - '*' # a release should make a tag?
 
-name: Create Release
-
-env:
-  GITHUB_TOKEN: {{ secrets.ELEVATED_TOKEN }}
+name: Docker Release
 
 jobs:
   build:
