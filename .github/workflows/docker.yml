@@ -1,0 +1,15 @@
+on:
+  push:
+    tags:
+      - '*' # a release should make a tag?
+
+name: Create Release
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - run: echo "HELLO WORLD"
