@@ -5,6 +5,9 @@ on:
 
 name: Create Release
 
+env:
+  GITHUB_TOKEN: {{ secrets.ELEVATED_TOKEN }}
+
 jobs:
   build:
     name: Create Docker Image
